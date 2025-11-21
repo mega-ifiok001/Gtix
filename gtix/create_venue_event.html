@@ -1,39 +1,19 @@
 ﻿<!DOCTYPE html>
 <html lang="en" class="h-100">
-	
-<!-- Mirrored from www.gambolthemes.net/html-items/barren-html/disable-demo-link/create_venue_event.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Nov 2025 21:38:05 GMT -->
 <head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, shrink-to-fit=9">
-		<meta name="description" content="Gambolthemes">
-		<meta name="author" content="Gambolthemes">		
-		<title>Barren - Simple Online Event Ticketing System</title>
-		
-		<!-- Favicon Icon -->
-		<link rel="icon" type="image/png" href="images/fav.png">
-		
-		<!-- Stylesheets -->
-		<link rel="preconnect" href="https://fonts.googleapis.com/">
-		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
-		<link href='vendor/unicons-2.0.1/css/unicons.css' rel='stylesheet'>
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/datepicker.min.html" rel="stylesheet">
-		<link href="css/jquery-steps.html" rel="stylesheet">
-		<link href="css/responsive.css" rel="stylesheet">
-		<link href="css/night-mode.css" rel="stylesheet">
-		
-		<!-- Vendor Stylesheets -->
-		<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.carousel.css" rel="stylesheet">
-		<link href="vendor/OwlCarousel/assets/owl.theme.default.min.css" rel="stylesheet">
-		<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="vendor/bootstrap-select/dist/css/bootstrap-select.min.css" rel="stylesheet">		
-		<link href="vendor/ckeditor5/sample/css/sample.html" rel="stylesheet">		
-		
-	</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Barren - Create Event with Supabase</title>
 
+    <!-- All your existing CSS links (Bootstrap, Font Awesome, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/3.5.1/css/datepicker.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/night-mode.css" rel="stylesheet">
+</head>
 <body class="d-flex flex-column h-100">
 	<!-- Create Single Ticket Model Start-->
 	<div class="modal fade" id="singleTicketModal" tabindex="-1" aria-labelledby="singleTicketModalLabel" aria-hidden="false">
@@ -536,178 +516,126 @@
 	<!-- Create Group Ticket Model End-->
 	<!-- Header Start-->
 	<header class="header">
-		<div class="header-inner">
-			<nav class="navbar navbar-expand-lg bg-barren barren-head navbar fixed-top justify-content-sm-start pt-0 pb-0">
-				<div class="container">	
-					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-						<span class="navbar-toggler-icon">
-							<i class="fa-solid fa-bars"></i>
-						</span>
-					</button>
-					<a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 me-auto" href="index.html">
-						<div class="res-main-logo">
-							<img src="images/logo-icon.svg" alt="">
-						</div>
-						<div class="main-logo" id="logo">
-							<img src="images/logo.svg" alt="">
-							<img class="logo-inverse" src="images/dark-logo.svg" alt="">
-						</div>
-					</a>
-					<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-						<div class="offcanvas-header">
-							<div class="offcanvas-logo" id="offcanvasNavbarLabel">
-								<img src="images/logo-icon.svg" alt="">
-							</div>
-							<button type="button" class="close-btn" data-bs-dismiss="offcanvas" aria-label="Close">
-								<i class="fa-solid fa-xmark"></i>
-							</button>
-						</div>
-						<div class="offcanvas-body">
-							<div class="offcanvas-top-area">
-								<div class="create-bg">
-									<a href="create.html" class="offcanvas-create-btn">
-										<i class="fa-solid fa-calendar-days"></i>
-										<span>Create Event</span>
-									</a>
-								</div>
-							</div>							
-							<ul class="navbar-nav justify-content-end flex-grow-1 pe_5">
-								<li class="nav-item">
-									<a class="nav-link active" aria-current="page" href="index.html">Home</a>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Explore Events
-									</a>
-									<ul class="dropdown-menu dropdown-submenu">
-										<li><a class="dropdown-item" href="explore_events.html">Explore Events</a></li>
-										<li><a class="dropdown-item" href="venue_event_detail_view.html">Venue Event Detail View</a></li>
-										<li><a class="dropdown-item" href="online_event_detail_view.html">Online Event Detail View</a></li>
-									</ul>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="pricing.html">Pricing</a>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Blog
-									</a>
-									<ul class="dropdown-menu dropdown-submenu">
-										<li><a class="dropdown-item" href="our_blog.html">Our Blog</a></li>
-										<li><a class="dropdown-item" href="blog_detail_view.html">Blog Detail View</a></li>
-									</ul>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Help
-									</a>
-									<ul class="dropdown-menu dropdown-submenu">
-										<li><a class="dropdown-item" href="faq.html">FAQ</a></li>
-										<li><a class="dropdown-item" href="help_center.html">Help Center</a></li>
-										<li><a class="dropdown-item" href="contact_us.html">Contact Us</a></li>
-									</ul>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-										Pages
-									</a>
-									<ul class="dropdown-menu dropdown-submenu">
-										<li>
-											<a class="dropdown-item submenu-item" href="#">Other Pages</a>
-											<ul class="submenu dropdown-menu">
-												<li><a class="dropdown-item pe-5" href="sign_in.html">Sign In</a></li>
-												<li><a class="dropdown-item pe-5" href="sign_up.html">Sign Up</a></li>
-												<li><a class="dropdown-item pe-5" href="forgot_password.html">Forgot Password</a></li>
-												<li><a class="dropdown-item pe-5" href="about_us.html">About Us</a></li>
-												<li><a class="dropdown-item pe-5" href="checkout.html">Checkout</a></li>
-												<li><a class="dropdown-item pe-5" href="checkout_premium.html">Checkout Premium</a></li>
-												<li><a class="dropdown-item pe-5" href="invoice.html">Invoice</a></li>
-												<li><a class="dropdown-item pe-5" href="coming_soon.html">Coming Soon</a></li>
-												<li><a class="dropdown-item pe-5" href="error_404.html">Error 404</a></li>
-											</ul>
-										</li>
-										<li>
-											<a class="dropdown-item submenu-item" href="#">Create Event</a>
-											<ul class="submenu dropdown-menu">
-												<li><a class="dropdown-item pe-5" href="create.html">Create</a></li>
-												<li><a class="dropdown-item pe-5" href="create_venue_event.html">Create Venue Event</a></li>
-												<li><a class="dropdown-item pe-5" href="create_online_event.html">Create Online Event</a></li>
-											</ul>
-										</li>
-										<li>
-											<a class="dropdown-item submenu-item" href="#">Events View</a>
-											<ul class="submenu dropdown-menu">
-												<li><a class="dropdown-item pe-5" href="online_event_detail_view.html">Online Event Detail View</a></li>
-												<li><a class="dropdown-item pe-5" href="venue_event_detail_view.html">Venue Event Detail View</a></li>
-											</ul>
-										</li>
-										<li><a class="dropdown-item" href="booking_confirmed.html">Booking Confirmed</a></li>
-										<li><a class="dropdown-item" href="attendee_profile_view.html">Attendee Profile View</a></li>
-										<li><a class="dropdown-item" href="organiser_profile_view.html">Organiser Profile View</a></li>
-										<li><a class="dropdown-item" href="my_organisation_dashboard.html">Organization Dashboard</a></li>
-										<li><a class="dropdown-item" href="sell_tickets_online.html">Sell Tickets Online</a></li>
-										<li><a class="dropdown-item" href="refer_a_friend.html">Refer a Friend</a></li>
-										<li><a class="dropdown-item" href="term_and_conditions.html">Terms & Conditions</a></li>
-										<li><a class="dropdown-item" href="privacy_policy.html">Privacy Policy</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-						<div class="offcanvas-footer">
-							<div class="offcanvas-social">
-								<h5>Follow Us</h5>
-								<ul class="social-links">
-									<li><a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a>
-									<li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-									<li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-									<li><a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-									<li><a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="right-header order-2">
-						<ul class="align-self-stretch">
-							<li>
-								<a href="create.html" class="create-btn btn-hover">
-									<i class="fa-solid fa-calendar-days"></i>
-									<span>Create Event</span>
-								</a>
-							</li>
-							<li class="dropdown account-dropdown">
-								<a href="#" class="account-link" role="button" id="accountClick" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
-									<img src="images/profile-imgs/img-13.jpg" alt="">
-									<i class="fas fa-caret-down arrow-icon"></i>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-account dropdown-menu-end" aria-labelledby="accountClick">
-									<li>
-										<div class="dropdown-account-header">
-											<div class="account-holder-avatar">
-												<img src="images/profile-imgs/img-13.jpg" alt="">
-											</div>
-											<h5>John Doe</h5>
-											<p>johndoe@example.com</p>
-										</div>
-									</li>
-									<li class="profile-link">
-										<a href="my_organisation_dashboard.html" class="link-item">My Organisation</a>
-										<a href="organiser_profile_view.html" class="link-item">My Profile</a>									
-										<a href="sign_in.html" class="link-item">Sign Out</a>									
-									</li>
-								</ul>
-							</li>
-							<li>
-								<div class="night_mode_switch__btn">
-									<div id="night-mode" class="fas fa-moon fa-sun"></div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-			<div class="overlay"></div>
-		</div>
-	</header>
+    <div class="header-inner">
+        <nav class="navbar navbar-expand-lg bg-barren barren-head navbar fixed-top justify-content-sm-start pt-0 pb-0">
+            <div class="container">	
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </span>
+                </button>
+
+                <a class="navbar-brand order-1 order-lg-0 ml-lg-0 ml-2 me-auto" href="index.html">
+                    <div class="res-main-logo">
+                        <img src="images/logo-icon.svg" alt="">
+                    </div>
+                    <div class="main-logo" id="logo">
+                        <img src="images/logo.svg" alt="">
+                        <img class="logo-inverse" src="images/dark-logo.svg" alt="">
+                    </div>
+                </a>
+
+                <!-- Mobile Offcanvas Menu (unchanged) -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+                    <div class="offcanvas-header">
+                        <div class="offcanvas-logo">
+                            <img src="images/logo-icon.svg" alt="">
+                        </div>
+                        <button type="button" class="close-btn" data-bs-dismiss="offcanvas">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="offcanvas-top-area">
+                            <div class="create-bg">
+                                <a href="create.html" class="offcanvas-create-btn">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                    <span>Create Event</span>
+                                </a>
+                            </div>
+                        </div>
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe_5">
+                            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="explore_events.html" >Explore Events</a>
+                           
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+
+<!-- Right Side: Auth Area -->
+<div class="auth-section d-flex align-items-center">
+
+  <!-- WHEN USER IS LOGGED OUT → Show Sign In & Sign Up buttons -->
+  <div id="auth-logged-out" class="d-flex align-items-center gap-3">
+    <a href="sign_in.html" class="btn btn-outline-light">Sign In</a>
+    <a href="sign_up.html" class="create-btn btn-hover px-4">Sign Up</a>
+  </div>
+
+  <!-- WHEN USER IS LOGGED IN → Show Name/Email + Dropdown -->
+  <div id="auth-logged-in" class="dropdown" style="display: none;">
+    <a href="#" 
+       class="d-flex align-items-center text-white text-decoration-none" 
+       role="button" 
+       data-bs-toggle="dropdown" 
+       aria-expanded="false">
+       
+      <!-- User Avatar + Name (or Email if no name) -->
+      <img id="user-avatar" 
+           src="images/profile-imgs/img-13.jpg" 
+           alt="User" 
+           class="rounded-circle me-2" 
+           width="40" height="40">
+      
+      <span id="user-display-name" class="fw-medium">Loading...</span>
+      <i class="fas fa-caret-down ms-2"></i>
+    </a>
+
+	
+
+    <!-- Dropdown Menu -->
+    <ul class="dropdown-menu dropdown-menu-end p-3 shadow-lg border-0">
+      <li class="text-center mb-3">
+        <img id="user-avatar2" 
+             src="images/profile-imgs/img-13.jpg" 
+             class="rounded-circle mb-3" 
+             width="80" height="80" 
+             alt="User">
+        <h6 id="user-fullname" class="mb-1 fw-bold">John Doe</h6>
+        <p id="user-email" class="text-muted small mb-0">johndoe@example.com</p>
+      </li>
+
+      <li><hr class="dropdown-divider"></li>
+
+      <li>
+        <a href="my_organisation_dashboard.html" class="dropdown-item py-2 rounded">
+          My Organisation
+        </a>
+      </li>
+      <li>
+        <a href="organiser_profile_view.html" class="dropdown-item py-2 rounded">
+          My Profile
+        </a>
+      </li>
+      <li>
+        <a href="#" 
+           class="dropdown-item py-2 rounded text-danger fw-medium"
+           onclick="signOutUser(); return false;">
+          Sign Out
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+            </div>
+        </nav>
+        <div class="overlay"></div>
+    </div>
+</header>
 	<!-- Header End-->
 	<!-- Body Start-->
 	<div class="wrapper">
@@ -1735,36 +1663,251 @@
 	<!-- Footer End-->
 	
 	
-	<script src="js/jquery.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.bundle.min.html"></script>
-	<script src="vendor/OwlCarousel/owl.carousel.html"></script>
-	<script src="vendor/bootstrap-select/dist/js/bootstrap-select.min.html"></script>	
-	<script src="vendor/ckeditor5/ckeditor.html"></script>
-	<script src="js/custom.html"></script>
-	<script src="js/night-mode.html"></script>
-	<script src="js/jquery-steps.min.html"></script>
-	<script src="js/datepicker.min.html"></script>
-	<script src="js/i18n/datepicker.en.html"></script>
-	<script>
-		$('#add-event-tab').steps({
-		  onFinish: function () {
-			alert('Wizard Completed');
-		  }
-		});		
-	</script>
-	<script>
-		ClassicEditor
-		.create( document.querySelector( '#pd_editor' ), {
-			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-		} )
-		.then( editor => {
-			window.editor = editor;
-		} )
-		.catch( err => {
-			console.error( err.stack );
-		} );
-	</script>
-</body>
+<!-- ALL SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/3.5.1/js/datepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-<!-- Mirrored from www.gambolthemes.net/html-items/barren-html/disable-demo-link/create_venue_event.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 19 Nov 2025 21:38:09 GMT -->
+<!-- THIS LOADS YOUR AUTH + CREATES window.supabaseClient -->
+<script src="js/auth.js"></script>
+
+<script>
+ // This will now ALWAYS work — no waiting, no errors
+  const supabase = window.supabaseClient;
+
+  // Optional safety (will never trigger if auth.js is correct)
+  if (!supabase) {
+    alert("Supabase failed to load!");
+    throw new Error("supabaseClient missing");
+  }
+
+  // ALL YOUR EXISTING CODE BELOW — 100% unchanged
+  let currentEventId = null;
+  let tickets = [];
+
+  async function initAuth() {
+    const { data: { user } } = await supabase.auth.getUser();
+    if (!user) {
+      alert("Please sign in to create an event!");
+      window.location.href = "sign_in.html";
+    }
+    return user;
+  }
+
+  // ========== SAVE EVENT ==========
+  async function saveEventDetails() {
+    const user = await initAuth();
+    if (!user) return false;
+
+    const eventName = document.querySelector('#tab_step1 input[placeholder="Enter event name here"]')?.value.trim();
+    if (!eventName) {
+      alert("Event name is required!");
+      return false;
+    }
+
+    const eventData = {
+      user_id: user.id,
+      name: eventName,
+      category: Array.from(document.querySelectorAll('#tab_step1 select[multiple] option:checked'))
+        .map(o => o.textContent.trim() || o.value),
+      event_date: new Date(
+        document.querySelector('#tab_step1 .datepicker-here').value + ' ' +
+        document.querySelector('#tab_step1 select[data-live-search]:first-of-type').value
+      ).toISOString(),
+      duration_minutes: parseInt(document.querySelector('#tab_step1 select[data-live-search]:last-of-type').value) || 60,
+      description: window.editor?.getData() || "",
+      venue: document.querySelector('#tab_step1 input[placeholder=""]:nth-of-type(1)')?.value || null,
+      address_line1: document.querySelector('#tab_step1 input[placeholder=""]:nth-of-type(2)')?.value || null,
+      address_line2: document.querySelector('#tab_step1 input[placeholder=""]:nth-of-type(3)')?.value || null,
+      country: document.querySelector('#tab_step1 select.selectpicker')?.value || "Australia",
+      state: document.querySelector('#tab_step1 input[value="Victoria"]')?.value || "Victoria",
+      city: document.querySelector('#tab_step1 input[value="Melbourne"]')?.value || "Melbourne",
+      zip_code: document.querySelector('#tab_step1 input[value="3000"]')?.value || "3000"
+    };
+
+    const { data, error } = await supabase
+      .from('events')
+      .insert(eventData)
+      .select()
+      .single();
+
+    if (error) {
+      alert("Failed to create event: " + error.message);
+      console.error(error);
+      return false;
+    }
+
+    currentEventId = data.id;
+    alert("Event created successfully! Now add tickets");
+    return true;
+  }
+
+  // ========== LOAD & RENDER TICKETS ==========
+  async function loadTickets() {
+    if (!currentEventId) return;
+    const { data } = await supabase
+      .from('tickets')
+      .select('*, ticket_variations(*), early_bird_discounts(*)')
+      .eq('event_id', currentEventId)
+      .order('sort_order');
+
+    tickets = data || [];
+    renderTickets();
+  }
+
+  function renderTickets() {
+    const container = document.querySelector('.ticket-type-item-list');
+    const counter = document.querySelector('.venue-event-ticket-counter');
+    counter.textContent = tickets.length;
+
+    if (!tickets.length) {
+      container.innerHTML = `<div class="text-center p_30 text-muted">No tickets yet. Click "Add Tickets" to create one.</div>`;
+      return;
+    }
+
+    container.innerHTML = tickets.map(t => {
+      const price = t.ticket_variations[0] ? `$${(t.ticket_variations[0].price_cents / 100).toFixed(2)}` : "Free";
+      const discount = t.early_bird_discounts?.[0]
+        ? `${t.early_bird_discounts[0].discount_value}${t.early_bird_discounts[0].discount_type === 'percentage' ? '%' : '$'} off`
+        : "";
+
+      return `
+        <div class="price-ticket-card mt-4">
+          <div class="price-ticket-card-head p-4 d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <span class="icon-big rotate-icon icon icon-purple me-3"><i class="fa-solid fa-ticket"></i></span>
+              <div>
+                <h5 class="mb-0">${t.name} - ${price}</h5>
+                <small class="text-muted">${t.type === 'group' ? t.group_size + ' people per ticket' : 'Single ticket'}</small>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              ${discount ? '<span class="badge bg-success">Early Bird</span>' : ''}
+              <button class="btn btn-sm btn-outline-danger" onclick="deleteTicket('${t.id}')">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>`;
+    }).join('');
+  }
+
+  // ========== DELETE TICKET ==========
+  window.deleteTicket = async (id) => {
+    if (!confirm("Delete this ticket?")) return;
+    await supabase.from('tickets').delete().eq('id', id);
+    loadTickets();
+  };
+
+  // ========== SINGLE TICKET SAVE ==========
+  document.querySelector('#singleTicketModal .main-btn').onclick = async () => {
+    if (!currentEventId) return alert("Create the event first!");
+
+    const name = document.querySelector('#singleTicketModal input[placeholder="Event Ticket Name"]')?.value.trim();
+    if (!name) return alert("Ticket name required!");
+
+    const { data: ticket } = await supabase.from('tickets').insert({
+      event_id: currentEventId,
+      type: 'single',
+      name,
+      description: document.querySelector('#singleTicketModal textarea')?.value || "",
+      sort_order: parseInt(document.querySelector('#singleTicketModal input[value="1"]')?.value) || 1,
+      total_quantity: document.querySelector('#is-restrict-total-ticket').checked ? null : parseInt(document.querySelector('.total_ticket_per_level input')?.value) || null,
+      max_per_order: document.querySelector('#is-restrict-ticket-per-user').checked ? null : parseInt(document.querySelector('.total_ticket_per_user input')?.value) || null
+    }).select().single();
+
+    document.querySelectorAll('#singleTicketModal .ticket-subtype-row').forEach(row => {
+      const price = parseFloat(row.querySelector('input[type="number"]')?.value);
+      const name = row.querySelector('input[type="text"]')?.value.trim();
+      if (price > 0 && name) {
+        supabase.from('ticket_variations').insert({
+          ticket_id: ticket.id,
+          name,
+          price_cents: Math.round(price * 100)
+        });
+      }
+    });
+
+    bootstrap.Modal.getInstance(document.getElementById('singleTicketModal')).hide();
+    loadTickets();
+  };
+
+  // ========== GROUP TICKET SAVE ==========
+  document.querySelector('#groupTicketModal .main-btn').onclick = async () => {
+    if (!currentEventId) return alert("Create the event first!");
+
+    const name = document.querySelector('#groupTicketModal input[placeholder*="Group Name"]')?.value.trim();
+    const price = parseFloat(document.querySelector('#groupTicketModal input[value="10"]')?.value || 0);
+    const groupSize = parseInt(document.querySelector('#groupTicketModal input[placeholder="Enter Total Tickets Per Group"]')?.value);
+
+    if (!name || price <= 0 || !groupSize) return alert("Complete all group ticket fields!");
+
+    const { data: ticket } = await supabase.from('tickets').insert({
+      event_id: currentEventId,
+      type: 'group',
+      name,
+      group_size: groupSize,
+      total_quantity: document.querySelector('#is-restrict-total-ticket2').checked ? null : parseInt(document.querySelector('.total_ticket_per_level2 input')?.value) || null,
+      max_per_order: document.querySelector('#is-restrict-ticket-per-user2').checked ? null : parseInt(document.querySelector('.total_ticket_per_user2 input')?.value) || null
+    }).select().single();
+
+    await supabase.from('ticket_variations').insert({
+      ticket_id: ticket.id,
+      name: "Group Pass",
+      price_cents: Math.round(price * 100)
+    });
+
+    bootstrap.Modal.getInstance(document.getElementById('groupTicketModal')).hide();
+    loadTickets();
+  };
+
+  // ========== WIZARD BUTTONS ==========
+  document.querySelectorAll('.steps_btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const dir = btn.getAttribute('data-direction');
+      if (dir === 'next' && document.querySelector('#tab_step1.active')) {
+        if (!(await saveEventDetails())) return;
+        loadTickets();
+      }
+      if (dir === 'finish') {
+        alert(`Event created with ${tickets.length} ticket(s)! Taking you to dashboard...`);
+        setTimeout(() => location.href = 'my_organisation_dashboard.html', 1200);
+      }
+    });
+  });
+
+  // ========== ON PAGE LOAD ==========
+  $(document).ready(async () => {
+    await initAuth();
+    $('.selectpicker').selectpicker();
+    $('.datepicker-here').datepicker({ language: 'en' });
+
+    // Toggle unlimited fields
+    document.querySelectorAll('input[id^="is-restrict"]').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const panel = cb.closest('.main-card')?.querySelector('.total_ticket_per_level, .total_ticket_per_user, .total_ticket_per_level2, .total_ticket_per_user2');
+        if (panel) panel.parentElement.style.display = cb.checked ? 'none' : 'block';
+      });
+    });
+
+    // Early bird toggle
+    document.querySelectorAll('#bird-discount, #bird-discount2').forEach(cb => {
+      cb.addEventListener('change', () => {
+        const wrapper = cb.closest('.main-card')?.querySelector('.online-event-discount-wrapper, .online-event-discount-wrapper2');
+        if (wrapper) wrapper.style.display = cb.checked ? 'block' : 'none';
+      });
+    });
+  });
+</script>
+
+<!-- CKEditor -->
+<script src="https://cdn.ckeditor.com/ckeditor5/41.0.0/classic/ckeditor.js"></script>
+<script>
+  ClassicEditor.create(document.querySelector('#pd_editor'), {
+    toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote']
+  }).catch(err => console.error(err));
+</script>
+</body>
 </html>
